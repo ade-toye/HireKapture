@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HireKapture</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- ── Header ── -->
+    <header>
+      <div class="header-inner">
+<<<<<<< HEAD
+        <img src="logo.png" class="header-logo" alt="HireKapture logo" />
+=======
+        <img src="icons/icon48.png" class="header-logo" alt="HireKapture logo" />
+>>>>>>> 675c2d1c226b107a5b9f477145ac0a9d53d557f5
+        <div class="header-text">
+          <h1>HireKapture</h1>
+          <p class="subtitle">Save job applications to your tracker</p>
+        </div>
+      </div>
+      <div id="platform-badge" class="platform-badge hidden"></div>
+    </header>
+
+    <!-- ── Status banner (success / error) ── -->
+    <div id="status-banner" class="status-banner hidden"></div>
+
+    <!-- ── Duplicate panel ── -->
+    <div id="duplicate-panel" class="duplicate-panel hidden">
+      <div class="dup-header">
+        <span class="dup-icon">⚠</span>
+        <strong>Possible duplicate</strong>
+      </div>
+      <p id="dup-detail">This job may already be in your tracker.</p>
+      <div class="dup-actions">
+        <button id="save-anyway-btn" type="button" class="btn-save-anyway">Save Anyway</button>
+        <button id="dismiss-dup-btn" type="button" class="btn-dismiss">Dismiss</button>
+      </div>
+    </div>
+
+    <!-- ── Form ── -->
+    <form id="job-form">
+      <div class="form-group">
+        <label for="company">Company Name</label>
+        <input type="text" id="company" placeholder="e.g. Google" />
+      </div>
+
+      <div class="form-group">
+        <label for="jobLink">Job Link</label>
+        <input type="url" id="jobLink" placeholder="Auto-filled from current tab" readonly />
+      </div>
+
+      <div class="form-group">
+        <label for="jobTitle">Job Title</label>
+        <input type="text" id="jobTitle" placeholder="e.g. Software Engineer Intern" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group half">
+          <label for="dateApplied">Date Applied</label>
+          <input type="date" id="dateApplied" />
+        </div>
+        <div class="form-group half">
+          <label for="deadline">Deadline</label>
+          <input type="date" id="deadline" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group half">
+          <label for="jobType">Type of Job</label>
+          <select id="jobType">
+            <option value="">-- Select --</option>
+            <option value="Internship">Internship</option>
+            <option value="Co-op">Co-op</option>
+            <option value="Full-time">Full-time</option>
+            <option value="Part-time">Part-time</option>
+            <option value="Contract">Contract</option>
+            <option value="Temporary">Temporary</option>
+            <option value="Fellowship">Fellowship</option>
+            <option value="Research">Research</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group half">
+          <label for="status">Application Status</label>
+          <select id="status">
+            <option value="Applied" selected>Applied</option>
+            <option value="Interested">Interested</option>
+            <option value="Interviewing">Interviewing</option>
+            <option value="Rejected">Rejected</option>
+            <option value="Offer">Offer</option>
+            <option value="Accepted">Accepted</option>
+            <option value="Withdrawn">Withdrawn</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="salary">Salary (Annual)</label>
+        <input type="text" id="salary" placeholder="e.g. $80,000 or £45,000" />
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Email / LinkedIn</label>
+        <input type="text" id="contact" placeholder="e.g. recruiter@company.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" placeholder="e.g. London, UK or Remote" />
+      </div>
+
+      <div class="form-group">
+        <label for="interviewDate">Interview Date</label>
+        <input type="date" id="interviewDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Notes</label>
+        <textarea id="notes" rows="3" placeholder="Any extra notes..."></textarea>
+      </div>
+
+      <button type="submit" id="save-btn" class="btn-primary">
+        <span id="btn-text">Save to Google Sheet</span>
+        <span id="btn-spinner" class="spinner hidden"></span>
+      </button>
+    </form>
+
+    <footer>
+      <p>HireKapture &bull; Powered by Google Sheets</p>
+    </footer>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
